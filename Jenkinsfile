@@ -42,8 +42,8 @@ pipeline {
                         cd ./sample-gitops/sample-api/rolling-update-no-istio
                         kustomize edit set image oscka/sample-api:${TAG}
                         # 로컬외에는 주석 제거한다
-                        git config --global user.email "admin@demo.com"
-                        git config --global user.name "admin"
+                        git config --global user.email "minsoo.park@osckorea.com"
+                        git config --global user.name "mspark11"
                         git add .
                         git commit -am 'update image tag ${TAG}'
                         git remote set-url --push origin ${gitOpsUrl}
